@@ -2,7 +2,7 @@ from PIL import Image
 from PIL import ImageOps
 import matplotlib.pyplot as plt
 import numpy as np
-image=Image.open("data/frame100.jpg")# ouvrir une image de frame100
+image=Image.open("frame100.jpg")# ouvrir une image de frame100
 image_gray=ImageOps.grayscale(image) #convertir l'image en échelle noir et blanc(grayscale)
 array=np.array(image_gray) #conversion de l'image en matrice
 box=(613,257,644,287)
