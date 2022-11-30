@@ -1,2 +1,0 @@
-258 332 265 332 265 350 258 350 raquette_noire_Flore 0
-258 331 265 331 265 350 258 350 raquette_noire_Flore 0
