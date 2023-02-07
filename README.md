@@ -37,5 +37,36 @@ Toutes les métriques sont tracées et disponibles via le lien Github suivant  :
 general.py(disponible via ce lien : https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/models/YOLOv5_trained/utils/general.py)
 : code qui permet de tracer les bounding boxes sur les images et vidéos à tester.
 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+Description des différents dossiers:
+scripts : contient les différents codes python utilisés notamment pour la division d'une vidéo en plusieurs frames, les tests statistiques de traitement d'images et les algorithmes associés aux modèle YOLO ( une description plus détaillée est disponible  en suivant ce lien :
+https://github.com/centralelyon/par-22-23-detection-raquette/tree/main/scripts ).
+datasets: contient l'ensemble des images utilisées pour entraîner, tester et valider nos modèles de détection.
+datasets
+    |_____raquette_data : images issues de vidéos de matchs de  tennis    de table et leurs labels.
+    |_____raquette_plusieurs_vues : dataset personnalisée générée avec Keras avec plusieurs angles de vue d'une raquette.
+models : contient l'ensemble des modèles déployés pour la détection avec tous les codes, les fichiers, les requirements nécessaires.
+models
+   |____YOLOv5 trained : la documentation de ce modèle a été appuyée sur le lien GitHub suivant : https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data et sur le site suivant : https://blog.paperspace.com/train-yolov5-custom-data/. 
+   |____YOLOv5_trained_with_roboflow : l'entraînement de ce modèle a été réalisée avec le site roboflow qui est un framework open source pour entraîner "from scratch" son modèle. ( voir le site en cliquant sur ce lien : https://universe.roboflow.com/ ).
 
+Data augmentation : contient l'ensemble des résultats de la data augmentation ( rotation, changement de scale, de luminosité, de contraste, symétrie, normalisation etc). Nous passons d'une dataset de 450 images à 900 images sans annotations supplémentaires.
 
+tracking_results : contient les résultats de détection de nos modèles sur plusieurs samples ( vidéos). On réalise une inférence du modèle établi sur ces vidéos avec le code detect.py décrit ci-dessus.
+
+runs_raquettes: contient les principaux résultats d'entraînement et de test de nos modèles, notamment les poids du réseau de neurones profond de YOLO, l'ensemble de métriques ( précision, rappel) et éventuellement la matrice de confusion associée qui donne une image claire de la robustesse du modèle.
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+Description des différents notebooks
+Data_augmentation_with_pytorch:  réalise plusieurs modifications de nos images ( redimensionnement, symétrie, rotation, normalisation etc).
+
+Flip_Horizontal_dataset : utilise seulement la symétrie horizontale de la data augmentation ( vue son utilité pour s'affranchir d'annoter plusieurs raquettes).
+
+Modèle_avec_Data_augmentation : déploie un modèle basé sur YOLOv5 + data augmentation. Il  initialise les poids, prépare les données de train, de validation et de test, entraîne le modèle, le valide ou "Fine tune", le teste et réalise des inférences sur de nouvelles vidéos.
+
+Pipeline : décrit la démarche suivie pour la détection d'une raquette : 
+    - Dégager les features intéressants.
+    - Préparer notre dataset ( jeu de données).
+    - Décrire l'architecture du réseau de neurones.
+    - Déployer le modèle.
+    - Valider le modèle.
+    
