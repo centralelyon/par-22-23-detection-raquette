@@ -79,10 +79,21 @@ Pipeline : décrit la démarche suivie pour la détection d'une raquette :
 Résultats obtenus:
 
 YOLOv3:
+Avec ce modèle, nous avons obtenu une précision de :
+82% sur la data d'entraînement.
+75% sur la data de test.
+Le temps de calcul est de 15 minutes.
 
 ![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection_yolov3.png?raw=true)
 ![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection_yolov3_1.png?raw=true)
 
 YOLOv5:
+Avec ce modèle, nous avons obtenu une précision de :
+85% sur la data de test.
+Le temps de calcul est aussi de 20 minutes.
+
 ![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection.png?raw=true)
 ![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection_v5_1.png?raw=true)
+Limites du modèle:
+Détection d'une seule raquette (recherche dans une zone limitée de l'image).
+Précsion biaisée ( la test set a des caractéristiques similaires que la training set) ( la précision se dégrade lorsque la distance de la caméra varie, la luminosité ou le contraste change etc).
