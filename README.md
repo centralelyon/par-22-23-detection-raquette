@@ -56,6 +56,8 @@ Data augmentation : contient l'ensemble des résultats de la data augmentation (
 ![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/Data%20augmentation/flipped_horizontal_image.png?raw=true)
 ![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/Data%20augmentation/normalized_image.png?raw=true)
 ![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/Data%20augmentation/flipped_image.png?raw=true)
+
+
 tracking_results : contient les résultats de détection de nos modèles sur plusieurs samples ( vidéos). On réalise une inférence du modèle établi sur ces vidéos avec le code detect.py décrit ci-dessus.
 
 runs_raquettes: contient les principaux résultats d'entraînement et de test de nos modèles, notamment les poids du réseau de neurones profond de YOLO, l'ensemble de métriques ( précision, rappel) et éventuellement la matrice de confusion associée qui donne une image claire de la robustesse du modèle.
