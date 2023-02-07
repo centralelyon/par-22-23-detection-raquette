@@ -69,4 +69,4 @@ Pipeline : décrit la démarche suivie pour la détection d'une raquette :
     - Décrire l'architecture du réseau de neurones.
     - Déployer le modèle.
     - Valider le modèle.
-    
+![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection.png?raw=true)
