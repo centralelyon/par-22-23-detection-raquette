@@ -51,7 +51,10 @@ models
    |____YOLOv5_trained_with_roboflow : l'entraînement de ce modèle a été réalisée avec le site roboflow qui est un framework open source pour entraîner "from scratch" son modèle. ( voir le site en cliquant sur ce lien : https://universe.roboflow.com/ ).
 
 Data augmentation : contient l'ensemble des résultats de la data augmentation ( rotation, changement de scale, de luminosité, de contraste, symétrie, normalisation etc). Nous passons d'une dataset de 450 images à 900 images sans annotations supplémentaires.
-
+![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/Data%20augmentation/contrast_image.png?raw=true)
+![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/Data%20augmentation/flipped_horizontal_image.png?raw=true)
+![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/Data%20augmentation/normalized_image.png?raw=true)
+![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/Data%20augmentation/rotation_image.png?raw=true)
 tracking_results : contient les résultats de détection de nos modèles sur plusieurs samples ( vidéos). On réalise une inférence du modèle établi sur ces vidéos avec le code detect.py décrit ci-dessus.
 
 runs_raquettes: contient les principaux résultats d'entraînement et de test de nos modèles, notamment les poids du réseau de neurones profond de YOLO, l'ensemble de métriques ( précision, rappel) et éventuellement la matrice de confusion associée qui donne une image claire de la robustesse du modèle.
