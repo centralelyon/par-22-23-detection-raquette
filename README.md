@@ -69,4 +69,11 @@ Pipeline : décrit la démarche suivie pour la détection d'une raquette :
     - Décrire l'architecture du réseau de neurones.
     - Déployer le modèle.
     - Valider le modèle.
+
+Résultats obtenus:
+YOLOv3:
+![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection_yolov3.png?raw=true)
+![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection_yolov3_1.png?raw=true)
+YOLOv5:
 ![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection.png?raw=true)
+![alt text](https://github.com/centralelyon/par-22-23-detection-raquette/blob/main/exemple_detection_v5_1.png?raw=true)
